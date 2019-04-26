@@ -1,0 +1,1063 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{847F19D1-36F0-4D09-8FD1-69DF5A87D528}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TelefonRehberi.Ui</RootNamespace>
+    <AssemblyName>TelefonRehberi.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Content\css\bootstrap-rtl.min.css" />
+    <Content Include="Areas\Admin\Content\css\bootstrap.css" />
+    <Content Include="Areas\Admin\Content\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\css\entypo.css" />
+    <Content Include="Areas\Admin\Content\css\font-awesome.min.css" />
+    <Content Include="Areas\Admin\Content\css\mouldifi-core.css" />
+    <Content Include="Areas\Admin\Content\css\mouldifi-forms.css" />
+    <Content Include="Areas\Admin\Content\css\mouldifi-rtl-core.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\c3\c3.min.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\chartist\chartist.min.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\colorpicker\images\alpha-horizontal.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\colorpicker\images\alpha.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\colorpicker\images\hue-horizontal.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\colorpicker\images\hue.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\colorpicker\images\saturation.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\css3-animate-it-plugin\animations.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\datepicker\bootstrap-datepicker.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\dropzone\dropzone.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\dropzone\images\spritemap.png" />
+    <Content Include="Areas\Admin\Content\css\plugins\jvectormap\jquery-jvectormap-2.0.3.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\markdown\bootstrap-markdown.min.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\morris\morris.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\nouislider\nouislider.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\scrollbar\perfect-scrollbar.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\select2\select2.css" />
+    <Content Include="Areas\Admin\Content\css\plugins\summernote\summernote.css" />
+    <Content Include="Areas\Admin\Content\fonts\entypo.svg" />
+    <Content Include="Areas\Admin\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\Content\images\alarm.jpg" />
+    <Content Include="Areas\Admin\Content\images\alex-dolgove.png" />
+    <Content Include="Areas\Admin\Content\images\annual-book.jpg" />
+    <Content Include="Areas\Admin\Content\images\article-post-1.jpg" />
+    <Content Include="Areas\Admin\Content\images\article-post.jpg" />
+    <Content Include="Areas\Admin\Content\images\banner.jpg" />
+    <Content Include="Areas\Admin\Content\images\bar-chart-icon.png" />
+    <Content Include="Areas\Admin\Content\images\basketball.jpg" />
+    <Content Include="Areas\Admin\Content\images\blog-1.jpg" />
+    <Content Include="Areas\Admin\Content\images\blog-2.jpg" />
+    <Content Include="Areas\Admin\Content\images\blog-3.jpg" />
+    <Content Include="Areas\Admin\Content\images\blog-4.jpg" />
+    <Content Include="Areas\Admin\Content\images\blog-5.jpg" />
+    <Content Include="Areas\Admin\Content\images\blog-6.jpg" />
+    <Content Include="Areas\Admin\Content\images\camera.jpg" />
+    <Content Include="Areas\Admin\Content\images\cardboard.jpg" />
+    <Content Include="Areas\Admin\Content\images\carpanter.jpg" />
+    <Content Include="Areas\Admin\Content\images\chocolate.jpg" />
+    <Content Include="Areas\Admin\Content\images\clock.jpg" />
+    <Content Include="Areas\Admin\Content\images\desserts.jpg" />
+    <Content Include="Areas\Admin\Content\images\domnic-brown.png" />
+    <Content Include="Areas\Admin\Content\images\favicon.ico" />
+    <Content Include="Areas\Admin\Content\images\headphone.jpg" />
+    <Content Include="Areas\Admin\Content\images\icon-close.png" />
+    <Content Include="Areas\Admin\Content\images\imac-40.jpg" />
+    <Content Include="Areas\Admin\Content\images\iphone.jpg" />
+    <Content Include="Areas\Admin\Content\images\john-smith.png" />
+    <Content Include="Areas\Admin\Content\images\led.jpg" />
+    <Content Include="Areas\Admin\Content\images\like-icon.png" />
+    <Content Include="Areas\Admin\Content\images\loading.gif" />
+    <Content Include="Areas\Admin\Content\images\logo.png" />
+    <Content Include="Areas\Admin\Content\images\mac.jpg" />
+    <Content Include="Areas\Admin\Content\images\macbook-40.jpg" />
+    <Content Include="Areas\Admin\Content\images\man-3.jpg" />
+    <Content Include="Areas\Admin\Content\images\media-1.jpg" />
+    <Content Include="Areas\Admin\Content\images\media-2.jpg" />
+    <Content Include="Areas\Admin\Content\images\media-3.jpg" />
+    <Content Include="Areas\Admin\Content\images\office-40.jpg" />
+    <Content Include="Areas\Admin\Content\images\running-shoe.jpg" />
+    <Content Include="Areas\Admin\Content\images\snooker.jpg" />
+    <Content Include="Areas\Admin\Content\images\stella-johnson.png" />
+    <Content Include="Areas\Admin\Content\images\video-1.jpg" />
+    <Content Include="Areas\Admin\Content\images\vy.jpg" />
+    <Content Include="Areas\Admin\Content\images\whitelogo.png" />
+    <Content Include="Areas\Admin\Content\js\bootstrap.js" />
+    <Content Include="Areas\Admin\Content\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\js\functions.js" />
+    <Content Include="Areas\Admin\Content\js\general.js" />
+    <Content Include="Areas\Admin\Content\js\html5shiv.min.js" />
+    <Content Include="Areas\Admin\Content\js\jquery.min.js" />
+    <Content Include="Areas\Admin\Content\js\jquery.validate.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\blockui-master\jquery-ui.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\blockui-master\jquery.blockUI.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\blockui-master\license.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5 - Copy.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\c3\c3-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\c3\c3.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\c3\d3.v3.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\chartist\chartist-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\chartist\chartist.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\chartjs\Chart.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\chartjs\chartjs-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\css3-animate-it-plugin\css3-animate-it.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\autoFill.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\alwaysAsk.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\events.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\fills.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\focus.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\keyTable.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\plugins.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\autoFill.bootstrap.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\autoFill.bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\autoFill.foundation.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\autoFill.foundation.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\autoFill.jqueryui.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\autoFill.jqueryui.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap4.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.bootstrap4.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\buttons.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\api\addRemove.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\api\enable.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\api\group.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\api\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\api\text.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\columnGroups.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\columnsToggle.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\layout.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\restore.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\stateSave.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\column_visibility\text.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\copyi18n.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\filename.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\hidden.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\pdfMessage.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\pdfPage.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\swfPath.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\flash\tsv.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\copyi18n.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\filename.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\outputFormat-function.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\outputFormat-orthogonal.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\pdfImage.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\pdfMessage.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\pdfOpen.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\pdfPage.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\html5\tsv.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\className.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\collections-autoClose.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\collections-sub.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\collections.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\custom.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\export.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\keys.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\multiple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\new.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\pageLength.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\plugins.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\autoPrint.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\customisation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\message.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\select.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\print\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\styling\bootstrap4.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\styling\icons.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap4.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.bootstrap4.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.colVis.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.colVis.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.flash.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.flash.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.foundation.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.foundation.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.html5.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.html5.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.jqueryui.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.jqueryui.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.print.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\buttons.print.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\dataTables.buttons.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\swf\flashExport.swf" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\colReorder.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\col_filter.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\new_init.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\predefined.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\realtime.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\reset.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\colvis.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\fixedcolumns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\fixedheader.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\responsive.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\server_side.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\integration\state_save.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\styling\alt_insert.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\colvis.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\css_size.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\index_column.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\left_right_columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\right_column.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\server-side-processing.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\size_fixed.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\size_fluid.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\initialisation\two_columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\integration\api.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\integration\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\integration\select-checkbox.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\integration\select.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\colvis.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\col_filter.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\rowspan.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\rtl.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\styling\server-side-processing.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\integration\buttons.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\integration\colreorder.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\integration\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\integration\responsive-bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\integration\responsive.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\enable-disable.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\header_footer.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\horizontal-scroll.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\new.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\offset.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\show-hide.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\options\two_tables.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\css\keyTable.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\initialisation\events.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\initialisation\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\initialisation\server-side.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\initialisation\stateSave.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\styling\focusStyle.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\responsive.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\auto.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\classes.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\colreorder.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\column-visibility.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\columnPriority.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\fixedHeader.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\column-control\init-classes.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-types\bootstrap-modal.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-types\foundation-modal.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-types\immediateShow.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-types\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-types\jqueryui-modal.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\display-types\modal.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\responsive.bootstrap.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\responsive.bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\responsive.foundation.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\responsive.foundation.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\responsive.jqueryui.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\js\responsive.jqueryui.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\defaults.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\events.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\responsive.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\restrictedOrdering.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\scroll.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\selector.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\styling\reorderClass.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\examples\styling\snapX.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\js\dataTables.rowReorder.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\js\dataTables.rowReorder.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\css\scroller.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\api_scrolling.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\fixedColumns.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\large_js_source.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\server-side_processing.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\initialisation\state_saving.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.bootstrap.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.foundation.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.foundation.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.jqueryui.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\css\select.jqueryui.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\api\events.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\api\get.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\api\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\api\select.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\blurable.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\buttons.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\cells.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\checkbox.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\deferRender.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\i18n.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\multi.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\reload.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\initialisation\single.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\styling\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\styling\foundation.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\styling\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\examples\styling\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\js\dataTables.select.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\js\dataTables.select.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\License.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\images\sort_asc.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\images\sort_both.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\images\sort_desc.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\jszip.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\license.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\pdfmake.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\vfs_fonts.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\dropzone\dropzone.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\flot-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.colorhelpers.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.canvas.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.categories.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.image.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.navigate.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.selection.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.symbol.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.threshold.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.time.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\flot\LICENSE.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\jasny\jasny-bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\jvectormap\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\markdown\bootstrap-markdown.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\markdown\markdown.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\metismenu\jquery.metisMenu.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\morris\LICENSE.txt" />
+    <Content Include="Areas\Admin\Content\js\plugins\morris\morris-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\morris\morris.css" />
+    <Content Include="Areas\Admin\Content\js\plugins\morris\morris.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\morris\raphael-min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\nouislider\nouislider.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\peity\jquery.peity.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\peity\peity-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\scrollbar\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\select2\select2.full.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\sparkline\sparkline-script.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Areas\Admin\Content\js\plugins\wizard\MIT-LICENSE.txt" />
+    <Content Include="Areas\Admin\Content\js\respond.min.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\Base\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CalisanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Models\ViewModel\HomeViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\ViewModel\LoginViewModel.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Crypto.cs" />
+    <Compile Include="Models\ViewModel\CalisanViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Content\css\mouldifi-core.css.map" />
+    <Content Include="Areas\Admin\Content\css\plugins\summernote\font\summernote.eot" />
+    <Content Include="Areas\Admin\Content\css\plugins\summernote\font\summernote.ttf" />
+    <Content Include="Areas\Admin\Content\css\plugins\summernote\font\summernote.woff" />
+    <Content Include="Areas\Admin\Content\fonts\entypo.eot" />
+    <Content Include="Areas\Admin\Content\fonts\entypo.ttf" />
+    <Content Include="Areas\Admin\Content\fonts\entypo.woff" />
+    <Content Include="Areas\Admin\Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\Content\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Content\js\plugins\bootstrap-wysihtml5\LICENCE" />
+    <Content Include="Areas\Admin\Content\js\plugins\c3\LICENSE" />
+    <Content Include="Areas\Admin\Content\js\plugins\chartist\LICENSE-MIT" />
+    <Content Include="Areas\Admin\Content\js\plugins\chartjs\LICENSE.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\colorpicker\LICENSE" />
+    <Content Include="Areas\Admin\Content\js\plugins\css3-animate-it-plugin\css3-animate-it.jquery.json" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\AutoFill\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\common.scss" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\css\mixins.scss" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Buttons\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColReorder\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\ColVis\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\FixedHeader\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\KeyTable\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\RowReorder\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Scroller\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\Select\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Areas\Admin\Content\js\plugins\datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Areas\Admin\Content\js\plugins\jvectormap\LICENSE-AGPL" />
+    <Content Include="Areas\Admin\Content\js\plugins\markdown\LICENSE" />
+    <Content Include="Areas\Admin\Content\js\plugins\metismenu\LICENSE" />
+    <Content Include="Areas\Admin\Content\js\plugins\peity\MIT-LICENCE" />
+    <Content Include="Areas\Admin\Content\js\plugins\scrollbar\LICENSE" />
+    <Content Include="Areas\Admin\Content\js\plugins\select2\LICENSE.md" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\04a7ea46b1d177991d1114ad656394209140945f\mouldifi-core.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_accordions.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_alerts.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_badges.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_base.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_breadcrumbs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_buttons.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_carousel.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_dashboards.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_filter.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_footer.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_forms.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_global.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_graphs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_header.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_icons.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_input-groups.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_labels.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_mailbox.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_mixins.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_navbar.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_navs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_pager.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_panels.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_popovers.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_progress-bars.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_sidebar.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_tables.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_typography.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_variables.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_various-screens.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\55258fcf2b0dbbcc01df7c0dbf8888b8f2606ff2\_views.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_accordions.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_alerts.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_badges.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_base.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_breadcrumbs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_buttons.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_carousel.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_dashboards.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_extra-pages.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_filter.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_footer.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_forms.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_global.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_graphs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_header.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_icons.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_input-groups.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_labels.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_mailbox.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_mixins.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_navbar.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_navs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_pager.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_panels.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_popovers.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_progress-bars.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_sidebar.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_tables.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_timeline.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_typography.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_variables.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_various-screens.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\5707a232d6da0f0116c0f1163b7c8e6b066a852e\_views.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\7f8819af33ec92d17acb8cd0cf98a2bc5a1179c9\mouldifi-core.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\f9e4395641875bd9cac4d61eb2e7502991b6117a\mouldifi-core.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_accordions.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_alerts.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_badges.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_base.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_breadcrumbs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_buttons.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_carousel.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_dashboards.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_filter.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_footer.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_forms.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_global.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_graphs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_header.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_icons.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_input-groups.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_labels.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_mailbox.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_mixins.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_navbar.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_navs.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_pager.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_panels.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_popovers.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_progress-bars.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_sidebar.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_tables.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_timeline.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_typography.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_variables.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_various-screens.scssc" />
+    <Content Include="Areas\Admin\Content\sass\.sass-cache\fa921a47f31c0370eb6e31a01c262a03b646d26a\_views.scssc" />
+    <Content Include="Areas\Admin\Content\sass\components\_accordions.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_alerts.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_badges.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_base.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_breadcrumbs.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_buttons.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_carousel.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_dashboards.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_extra-pages.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_filter.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_footer.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_forms.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_global.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_graphs.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_header.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_icons.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_input-groups.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_labels.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_mailbox.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_mixins.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_modals.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_navbar.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_navs.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_pager.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_panels.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_popovers.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_progress-bars.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_sidebar.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_tables.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_timeline.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_typography.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_variables.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_various-screens.scss" />
+    <Content Include="Areas\Admin\Content\sass\components\_views.scss" />
+    <Content Include="Areas\Admin\Content\sass\mouldifi-core.scss" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Calisan\Listele.cshtml" />
+    <Content Include="Areas\Admin\Views\Calisan\Ekle.cshtml" />
+    <Content Include="Areas\Admin\Views\Departman\Listele.cshtml" />
+    <Content Include="Areas\Admin\Views\Departman\Ekle.cshtml" />
+    <Content Include="Areas\Admin\Views\Calisan\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\SifreDegistir.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Default\Details.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TelefonRehberi.Bll\TelefonRehberi.Bll.csproj">
+      <Project>{1b768e26-4a4a-47d7-b3c2-50e971225bee}</Project>
+      <Name>TelefonRehberi.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelefonRehberi.Dal\TelefonRehberi.Dal.csproj">
+      <Project>{42873302-8484-428B-833E-FF4A26E49CD1}</Project>
+      <Name>TelefonRehberi.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TelefonRehberi.Entity\TelefonRehberi.Entity.csproj">
+      <Project>{03387834-03eb-49d3-9628-a53812398e09}</Project>
+      <Name>TelefonRehberi.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57016</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57016/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

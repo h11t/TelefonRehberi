@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TelefonRehberi.Entity.Departman>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1 class="page-title">Kategori Listesi</h1>
+<!-- Breadcrumb -->
+<ol class="breadcrumb breadcrumb-2">
+    <li><a href="@Url.Action("Index","Home")"><i class="fa fa-home"></i>ANASAYFA</a></li>
+    <li><a href="#">Departman Listesi</a></li>
+
+</ol>
+<div class="row">
+    <div class="col-lg-12 animatedParent animateOnce z-index-50">
+        <div class="panel panel-default animated fadeInUp">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title">Departman Listesi</h3>
+                <ul class="panel-tool-options">
+                    <li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
+                    <li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
+                    <li><a data-rel="close" href="#"><i class="icon-cancel"></i></a></li>
+                </ul>
+            </div>
+            <div class="panel-body">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Departman Adı</th>
+                                <td> Çalışan Sayısı</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                <tr id="DepartmanList_@item.Id" class="gradeX">
+
+                                    <td>
+                                        <a class="btn btn-sm btn-red" onclick="DepartmanSil('@item.Id')">Sil</a> <br />
+                                        <br />
+                                        <a class="btn btn-sm btn-blue" href="@Url.Action("Edit","Departman", new { id=@item.Id })">Düzenle</a>
+                                    </td>
+                                    <td>@item.Ad</td>
+                                    <td>@item.Calisans.Count</td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section footerjs{
+
+
+    <script src="@ViewBag.Path/js/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/jszip.min.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/pdfmake.min.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/vfs_fonts.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="@ViewBag.Path/js/plugins/datatables/extensions/Buttons/js/buttons.colVis.js"></script>
+
+
+}

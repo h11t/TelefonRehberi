@@ -1,0 +1,49 @@
+﻿@model TelefonRehberi.Ui.Areas.Admin.Models.ViewModel.HomeViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="page-title">Anasayfa</h1>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-md-12 animatedParent animateOnce z-index-50">
+                <div class="panel minimal panel-default animated fadeInUp">
+                    <div class="panel-heading clearfix">
+                        <div class="panel-title">Bilgiler</div>
+                        @*<ul class="panel-tool-options">
+                                                <li class="dropdown">
+                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><i class="icon-cog"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-arrows-ccw"></i> Detay</a></li>
+
+                            </ul>
+                                                </li>
+                                            </ul>*@
+                    </div>
+                    <!-- panel body -->
+                    <div class="panel-body">
+                        <div class="row col-with-divider">
+                            <div class="col-xs-6 text-center stack-order">
+                                <h1 class="no-margins"> @Model.ToplamCalisan </h1>
+                                <small>Toplam Çalışan</small>
+                            </div>
+                            <div class="col-xs-6 text-center stack-order">
+                                <h1 class="no-margins">@Model.ToplamDepartman</h1>
+                                <small>Toplam Departman</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+

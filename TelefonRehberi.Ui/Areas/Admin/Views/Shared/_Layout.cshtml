@@ -1,0 +1,147 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TELEFON REHBERİ</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Site favicon -->
+    <link rel='shortcut icon' type='image/x-icon' href='@ViewBag.Path/images/favicon.ico' />
+    <!-- /site favicon -->
+    <!-- Entypo font stylesheet -->
+    <link href="@ViewBag.Path/css/entypo.css" rel="stylesheet">
+    <!-- /entypo font stylesheet -->
+    <!-- Font awesome stylesheet -->
+    <link href="@ViewBag.Path/css/font-awesome.min.css" rel="stylesheet">
+    <!-- /font awesome stylesheet -->
+    <!-- CSS3 Animate It Plugin Stylesheet -->
+    <link href="@ViewBag.Path/css/plugins/css3-animate-it-plugin/animations.css" rel="stylesheet">
+    <!-- /css3 animate it plugin stylesheet -->
+    <!-- Bootstrap stylesheet min version -->
+    <link href="@ViewBag.Path/css/bootstrap.min.css" rel="stylesheet">
+    <!-- /bootstrap stylesheet min version -->
+    <!-- Mouldifi core stylesheet -->
+    <link href="@ViewBag.Path/css/mouldifi-core.css" rel="stylesheet">
+    <!-- /mouldifi core stylesheet -->
+
+    <link href="@ViewBag.Path/css/mouldifi-forms.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="@ViewBag.Path/js/html5shiv.min.js"></script>
+          <script src="@ViewBag.Path/js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="js/plugins/flot/excanvas.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+</head>
+<body>
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page Sidebar -->
+        <div class="page-sidebar">
+
+            <!-- Site header  -->
+            <header class="site-header">
+                <div class="site-logo">
+                    @Html.ActionLink("PUBLIC UI", "Index", "Default", new { area = "" }, new { @class = "navbar-brand" })
+
+
+                  
+                </div>
+                <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
+                <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
+            </header>
+            <!-- /site header -->
+            <!-- Main navigation -->
+            <ul id="side-nav" class="main-menu navbar-collapse collapse">
+                <li class="has-sub">
+                    <a href="#"><i class="icon-layout"></i><span class="title">Çalışan Yönetimi</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="@Url.Action("Listele","Calisan")"><span class="title">Çalışan Listele</span></a></li>
+                        <li><a href="@Url.Action("Ekle","Calisan")"><span class="title">Çalışan Ekle</span></a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="#"><i class="icon-layout"></i><span class="title">Departman Yönetimi</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="@Url.Action("Listele","Departman")"><span class="title">Departman Listele</span></a></li>
+                        <li><a href="@Url.Action("Ekle","Departman")"><span class="title">Departman Ekle</span></a></li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="#"><i class="icon-layout"></i><span class="title">Ayarlar</span></a>
+                    <ul class="nav collapse">
+                        <li><a href="@Url.Action("SifreDegistir","Home")"><span class="title">Şifre Değiştir</span></a></li>
+                        <li><a href="@Url.Action("Logout","Home")"><span class="title">Çıkış Yap</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /main navigation -->
+        </div>
+        <!-- /page sidebar -->
+        <!-- Main container -->
+        <div class="main-container gray-bg">
+
+            
+            <!-- Main content -->
+            <div class="main-content">
+                @RenderBody()
+                <!-- Footer -->
+                <footer class="animatedParent animateOnce z-index-10">
+                    <div class="footer-main animated fadeInUp slow">&copy; 2019 <strong>admin yönetim paneli</strong>  <a target="_blank" href="#/">hilal tekdemir </a> </div>
+                </footer>
+                <!-- /footer -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /main container -->
+
+    </div>
+    <!-- /page container -->
+    <!--Load JQuery-->
+    <script src="@ViewBag.Path/js/jquery.min.js"></script>
+    <!-- Load CSS3 Animate It Plugin JS -->
+    <script src="@ViewBag.Path/js/plugins/css3-animate-it-plugin/css3-animate-it.js"></script>
+    <script src="@ViewBag.Path/js/bootstrap.min.js"></script>
+    <script src="@ViewBag.Path/js/plugins/metismenu/jquery.metisMenu.js"></script>
+    <script src="@ViewBag.Path/js/plugins/blockui-master/jquery-ui.js"></script>
+    <script src="@ViewBag.Path/js/plugins/blockui-master/jquery.blockUI.js"></script>
+
+    <script src="@ViewBag.Path/js/general.js?ver=2.0"></script>
+
+
+    <!--Float Charts-->
+
+    <script src="@ViewBag.Path/js/functions.js"></script>
+
+    @try
+    {
+        @RenderSection("footerjs")
+    }
+    catch { }
+
+
+
+</body>
+</html>

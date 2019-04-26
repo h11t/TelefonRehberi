@@ -1,0 +1,107 @@
+﻿@model TelefonRehberi.Entity.Calisan
+@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<style type="text/css">
+
+    .kutu {
+        width: 200px;
+        height: 200px;
+        float: left;
+    }
+
+    .resimkutu {
+        width: 190px;
+        height: 140px;
+        padding: 5px;
+        border: solid #666 1px;
+    }
+</style>
+
+
+<script src="/ckeditor/ckeditor.js"></script>
+
+
+<h1 class="page-title">Çalışan Düzenle</h1>
+<!-- Breadcrumb -->
+<ol class="breadcrumb breadcrumb-2">
+    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+    <li><a href="#">Çalışan Düzenle</a></li>
+
+</ol>
+<div class="row">
+    <div class="col-lg-6 animatedParent animateOnce z-index-50">
+        <div class="panel panel-default animated fadeInUp">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title">Çalışan Düzenle</h3>
+                <ul class="panel-tool-options">
+                    <li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
+                    <li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
+                    <li><a data-rel="close" href="#"><i class="icon-cancel"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="panel-body">
+
+
+                @{using (Html.BeginForm("Edit", "Calisan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+
+
+                        <div class="form-group">
+                            @Html.LabelForModel("Ad")
+                            @Html.TextBox("Ad", null, new { @class = "form-control required" })
+
+                        </div>
+                        <div class="form-group">
+                            <label>Soyad      </label>
+                            @Html.TextBox("Soyad", null, new { @class = "form-control required" })
+
+                        </div>
+                        <div class="form-group">
+                            <label>Telefon      </label>
+                            @Html.TextBox("Telefon", null, new { @class = "form-control required" })
+                        </div>
+                        <div class="form-group">
+                            <label for="emailaddress">Departman   </label>
+                            @Html.DropDownList("DepartmanID", null, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label for="emailaddress">Yönetici      </label>
+                            @Html.DropDownList("Yoneticiler", null, new { @class = "form-control" })
+                        </div>
+                                                
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+
+                    } }
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+        CKEDITOR.replace('editor1');
+</script>
+
+
+
+@section footerjs{
+
+
+    <script src="@Url.Content("/js/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("/js/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+    
+}
+

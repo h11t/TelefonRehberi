@@ -1,0 +1,59 @@
+﻿@model TelefonRehberi.Ui.Models.ViewModel.CalisanViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detay Sayfası</h2>
+
+<div>
+    <h4>Calışan Detay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Calisan.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisan.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calisan.Soyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisan.Soyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calisan.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisan.Telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Calisan.Departman.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Calisan.Departman.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yonetici)
+        </dt>
+
+        <dd>
+           
+            @Html.DisplayFor(model => model.Yonetici)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>
